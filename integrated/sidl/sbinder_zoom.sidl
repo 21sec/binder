@@ -1,0 +1,9 @@
+#include "fpp_zoom.h"
+
+fpi_error{int} 	fpp_zoom_record_init(uint32_t  u32_buffersize);
+fpi_error{int}	fpp_zoom_set_record_param(uint32_t  u32_windowID,EN_FPP_ZOOM_CAPTURE_TYPE_T  en_record_type,ST_RECORD_VIDEO_PARAM_T{struct}  param);
+fpi_error{int}	fpp_zoom_get_read_buffer_address( uint32_t{out}{len:*un32_size} **un32_addr,uint32_t{out}{len:1} *un32_size);
+fpi_error{int}	fpp_zoom_get_buffer_real_size(uint32_t{out}{len:1} *un32_realsize);
+fpi_error{int}	fpp_zoom_reset_buffer(void);
+fpi_error{int}	fpp_zoom_confirm_data(uint32_t address , uint32_t real_size);
+fpi_error{int}	fpp_zoom_record_control(EN_CONTROL_TYPE_T en_control_type);

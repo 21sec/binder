@@ -1,0 +1,32 @@
+#include "itv_defines.h"
+#include "itv_video.h"
+
+int itv_video_open(itv_handle_t{out}{len:1}* handle);
+
+int itv_video_close(itv_handle_t handle);
+
+int itv_video_start(itv_handle_t handle, const itv_video_start_param_t{in}{len:1}* param);
+
+int itv_video_stop(itv_handle_t handle, itv_video_stop_mode_t stopMode);
+
+int itv_video_pause(itv_handle_t handle);
+
+int itv_video_resume(itv_handle_t handle);
+
+int itv_video_clear(itv_handle_t handle);
+
+int itv_video_get_pts(itv_handle_t handle, unsigned long long{out}{len:1}* pts);
+
+int itv_video_get_frame_num(itv_handle_t handle, unsigned int{out}{len:1}* num);
+
+int itv_video_set_visible(itv_handle_t handle, itv_bool_t visible);
+
+int itv_video_set_rect(itv_handle_t handle, const itv_video_rect_t{in}{len:1}* rect);
+
+int itv_video_set_aspect(itv_handle_t handle, itv_video_aspect_mode_t aspect);
+
+int itv_video_set_trickmode(itv_handle_t handle, itv_bool_t mode);
+
+int itv_video_set_fullview(itv_handle_t handle, itv_video_fullview_type_t type);
+
+int itv_video_get_resolution(unsigned int{out}{len:1}* pWidth, unsigned int{out}{len:1}* pHeight);

@@ -1,0 +1,12 @@
+fpi_error{int} tos_cc_is_available(fpi_bool{int}{out}{len:1} *available);
+fpi_error{int} tos_cc_set_visibility(EN_CC_VISIBLE_LEVEL level,fpi_bool show);
+fpi_error{int} tos_cc_set_cc_enable_mode(EN_ACT_CTRL cmd,EN_CC_ENABLE_MODE mode);
+fpi_error{int} tos_cc_get_cc_enable_mode(EN_CC_ENABLE_MODE{int}{out}{len:1}  *mode);
+fpi_error{int} tos_cc_switch_digital_cc(EN_ACT_CTRL cmd,EN_DIGITAL_CC_TYPE type);
+fpi_error{int} tos_cc_get_digital_cc_type(EN_DIGITAL_CC_TYPE{int}{out}{len:1} *type);
+fpi_error{int} tos_cc_switch_analog_cc(EN_ACT_CTRL cmd,EN_ANALOG_CC_TYPE type);
+fpi_error{int} tos_cc_get_analog_cc_type(EN_ANALOG_CC_TYPE{int}{out}{len:1} *type);
+fpi_error{int} tos_cc_set_cc_preset_mode(EN_ACT_CTRL cmd,EN_CC_PRESET_MODE preset);
+fpi_error{int} tos_cc_get_cc_preset_mode(EN_CC_PRESET_MODE{int}{out}{len:1} *preset);
+fpi_error{int} tos_cc_set_cc_style(EN_ACT_CTRL cmd,EN_CC_STYLE_TYPE style_type,st_cc_style cc_style);
+fpi_error{int} tos_cc_get_cc_style(st_cc_style{int}{out}{len:1} *cc_style);

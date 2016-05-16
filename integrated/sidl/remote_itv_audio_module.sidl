@@ -1,0 +1,20 @@
+#include "itv_defines.h"
+#include "itv_audio.h"
+
+int itv_audio_open(itv_handle_t{out}{len:1}* handle);
+
+int itv_audio_close(itv_handle_t handle);
+
+int itv_audio_start(itv_handle_t handle, const itv_audio_start_param_t{in}{len:1}* param);
+
+int itv_audio_stop(itv_handle_t handle);
+
+int itv_audio_pause(itv_handle_t handle);
+
+int itv_audio_resume(itv_handle_t handle);
+
+int itv_audio_set_sync(itv_handle_t handle, itv_av_sync_mode_t mode);
+
+int itv_audio_set_channel_mode(itv_handle_t handle, itv_channel_mode_t mode);
+
+int itv_audio_get_pts(itv_handle_t handle, unsigned long long{out}{len:1}* pts);

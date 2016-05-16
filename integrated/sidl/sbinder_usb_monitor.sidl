@@ -1,0 +1,9 @@
+#include "tos_usb_monitor.h"
+#include "fpi_base_type.h"
+#include "fpi_error_code.h"
+
+fpi_error{int} tos_usb_add_callback(tos_usb_callback_fn{int}{in} cb, void{int}{in}{len:1}*userData);
+fpi_error{int} tos_usb_remove_callback(tos_usb_callback_fn{int}{in} cb);
+fpi_error{int} tos_usb_monitor_start();
+int tos_usb_get_partition_count();
+fpi_error{int} tos_usb_get_partition_info(int partition_idx, FPI_USB_Partition_Info_S{int}{out}{len:1}*info);

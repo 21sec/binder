@@ -1,0 +1,9 @@
+#include "itv_platform.h"
+
+int itv_platform_init(const itv_platform_init_param_t{in}{len:1}* param);
+
+int itv_platform_pause(void);
+
+int itv_platform_resume(void);
+
+int itv_platform_term(void);

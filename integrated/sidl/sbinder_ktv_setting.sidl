@@ -1,0 +1,9 @@
+#include "fpi_base_type.h"
+#include "fpi_error_code.h"
+
+fpi_error{int} tos_ktv_start_obtain_mic_data(char*{in}{len:strlen(path)+1} path);
+fpi_error{int} tos_ktv_stop_obtain_mic_data(char*{out}{len:strlen(path)+1} path);
+fpi_error{int} tos_ktv_set_echo_mode(uint32_t{in}{int} enable,uint32_t{in}{int} mode);
+fpi_error{int} tos_ktv_set_key_shift(uint32_t{in}{int} enable,uint32_t{in}{int} mode);
+fpi_error{int} tos_ktv_open_ktv(void);
+fpi_error{int} tos_ktv_close_ktv(void);

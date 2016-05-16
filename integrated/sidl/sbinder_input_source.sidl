@@ -1,0 +1,8 @@
+#include "tos_input_source.h"
+#include "fpi_debug_helper.h"
+
+fpi_error{int} tos_source_set_input(EN_API_SOURCE_INPUT{int}{in} input,EN_ACT_CTRL{int}{in} act);
+fpi_error{int} tos_source_get_input(EN_SOURCE_SAVE_TYPE{int}{in} type,EN_API_SOURCE_INPUT{int}{out}{len:1} *value);
+fpi_error{int} tos_source_is_insert(EN_API_SOURCE_INPUT{int}{in} inSource, int{int}{out}{len:1} *state);
+fpi_error{int} tos_source_set_input_async(EN_API_SOURCE_INPUT{int}{in} input,EN_ACT_CTRL{int}{in} act);
+fpi_error{int} tos_input_set_hdmi_edid_ver(EN_API_SOURCE_INPUT{int}{in} input, int32_t{int}{in} ver);

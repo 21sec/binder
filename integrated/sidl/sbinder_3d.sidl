@@ -1,0 +1,11 @@
+fpi_error{int} tos_3d_get_depth_of_field(int16_t{out}{len:1} *depth);
+fpi_error{int} tos_3d_set_depth_of_field(int16_t depth,EN_ACT_CTRL{int}{in} act);
+fpi_error{int} tos_3d_get_3dto2d_mode(EN_FPI_3D_VIDEO_DIAPLAY_FORMAT{out}{len:1} *mode);
+fpi_error{int} tos_3d_set_3dto2d_mode(EN_FPI_3D_VIDEO_DIAPLAY_FORMAT mode,EN_ACT_CTRL{int}{in} act);
+fpi_error{int} tos_3d_get_display_format(EN_FPI_3D_VIDEO_DIAPLAY_FORMAT{out}{len:1} *mode);
+fpi_error{int} tos_3d_set_display_format(EN_FPI_3D_VIDEO_DIAPLAY_FORMAT mode,EN_ACT_CTRL{int}{in} act);
+fpi_error{int} tos_3d_get_left_right_switch(int16_t{out}{len:1} *lrswitch);
+fpi_error{int} tos_3d_set_left_right_switch(int16_t lrswitch,EN_ACT_CTRL{int}{in} act);
+fpi_error{int} tos_3d_is_framepacking_mode(int16_t{out}{len:1} *mode);
+fpi_error{int} tos_3d_get_navigation(int16_t{out}{len:1} *mode);
+fpi_error{int} tos_3d_set_navigation(int16_t mode,EN_ACT_CTRL{int}{in} act);

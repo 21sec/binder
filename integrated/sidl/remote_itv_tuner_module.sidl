@@ -1,0 +1,18 @@
+#include "itv_defines.h"
+#include "itv_tuner.h"
+
+int itv_tuner_get_device_count(int{out}{len:1}* count);
+
+int itv_tuner_lock(int tunerId, const itv_delivery_t{in}{len:1}* delivery);
+
+int itv_tuner_get_lock_state(int tunerId, itv_bool_t{out}{len:1}* state);
+
+int itv_tuner_get_signal_quality(int tunerId, int{out}{len:1}* quality);
+
+int itv_tuner_get_signal_strength(int tunerId, int{out}{len:1}* strength);
+
+int itv_tuner_get_signal_ber(int tunerId, float{out}{len:1}* ber);
+
+int itv_tuner_get_signal_level(int tunerId, int{out}{len:1}* level);
+
+int itv_tuner_get_signal_snr(int tunerId, int{out}{len:1}* snr);

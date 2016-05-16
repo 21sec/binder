@@ -1,0 +1,17 @@
+
+fpi_error{int} tos_hbbtv_is_exist(fpi_bool{int}{out}{len:1} *exist);
+fpi_error{int} tos_hbbtv_open();
+fpi_error{int} tos_hbbtv_close();
+fpi_error{int} tos_hbbtv_get_state(EN_TOS_HBBTV_STATE{int}{out}{len:1} *state);
+fpi_error{int} tos_hbbtv_handle_key(uint16_t{int}{in} keyCode,uint16_t{int}{in} keyType,fpi_bool{int}{out}{len:1} *isHandle);
+fpi_error{int} tos_hbbtv_get_mode(fpi_bool{int}{out}{len:1} *mode);
+fpi_error{int} tos_hbbtv_set_mode(fpi_bool{int}{in} mode);
+fpi_error{int} tos_hbbtv_get_cookie_mode(fpi_bool{int}{out}{len:1} *mode);
+fpi_error{int} tos_hbbtv_set_cookie_mode(fpi_bool{int}{in} mode);
+fpi_error{int} tos_hbbtv_teletext_is_exist(fpi_bool{int}{out}{len:1} *exist);
+fpi_error{int} tos_hbbtv_teletext_is_open(fpi_bool{int}{out}{len:1} *open);
+fpi_error{int} tos_hbbtv_teletext_open();
+fpi_error{int} tos_hbbtv_teletext_close();
+fpi_error{int} tos_hbbtv_open_portal(char{int}{in}{len:1024} *webPortalURL);
+
+

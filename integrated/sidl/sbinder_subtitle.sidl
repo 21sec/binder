@@ -1,0 +1,14 @@
+#include "fpi_base_type.h"
+#include "fpi_error_code.h"
+#include "tos_function_setting.h"
+#include "tos_subtitle.h"
+
+fpi_error{int} tos_subtitle_get_info(fpi_subtitle_info_t {struct}{out}{len:1}*sttInfo);
+fpi_error{int} tos_subtitle_open(uint8_t index);
+fpi_error{int} tos_subtitle_set_visibility(EN_FPI_SUBTITLE_VISIBLE_LEVEL {int}level,fpi_bool {char}flag);
+fpi_error{int} tos_subtitle_get_status(fpi_bool {char}{out}{len:1}*flag);
+fpi_error{int} tos_subtitle_set_status(fpi_bool {char}flag);
+fpi_error{int} tos_subtitle_get_mode(EN_FPI_SUBTITLE_MODE {int}{out}{len:1}*mode);
+fpi_error{int} tos_subtitle_set_mode(EN_FPI_SUBTITLE_MODE {int}mode);
+fpi_error{int} tos_subtitle_get_prefer_language(EN_FPI_SUBTITLE_PREFER_LANGUAGE {int}type,EN_FPI_LANGUAGE {int}{out}{len:1}*language);
+fpi_error{int} tos_subtitle_set_prefer_language(EN_FPI_SUBTITLE_PREFER_LANGUAGE {int}type,EN_FPI_LANGUAGE {int}language);

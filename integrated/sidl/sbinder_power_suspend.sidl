@@ -1,0 +1,7 @@
+#include "tos_power_suspend.h"
+fpi_error{int} tos_power_suspend_set_onoff_status(fpi_bool{int}{in} flag);
+fpi_error{int} tos_power_suspend_get_onoff_status(fpi_bool{int}{out}{len:1} *flag);
+fpi_error{int} tos_power_suspend_set_str_debug_val(int{int}{in} var);
+fpi_error{int} tos_power_suspend_get_support_status(EN_POWER_SUSPEND_SUPPORT{int}{out}{len:1} *type);
+fpi_error{int} tos_power_suspend_get_current_work_mode(EN_POWER_SUSPEND_WORK_MODE{int}{out}{len:1} *mode);
+fpi_error{int} tos_power_suspend_get_usb_device_resuming_status(fpi_bool{int}{out}{len:1} *flag);

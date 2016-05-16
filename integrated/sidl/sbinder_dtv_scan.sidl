@@ -1,0 +1,21 @@
+#include "tos_dtv_scan.h"
+
+int tos_dtv_scan_start(int{in}{len:1}*param);
+
+int tos_dtv_scan_pause(int port);
+
+int tos_dtv_scan_resume(int port);
+
+int tos_dtv_scan_stop(int port);
+
+int tos_dtv_scan_db_save();
+
+int tos_dtv_scan_db_clear();
+
+int tos_dtv_scan_get_status(int{out}{len:1}*status);
+
+int tos_dtv_scan_get_current_scan_info(int{out}{len:1}*info);
+
+int tos_dtv_scan_add_callback(int port, int callback, int{in}{len:1}*userdata);
+
+int tos_dtv_scan_remove_callback(int port, int callback);

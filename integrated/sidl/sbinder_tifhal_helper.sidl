@@ -1,0 +1,17 @@
+#include "tos_tifhal_helper.h"
+
+int tos_tifhal_hdmicec_init();
+int tos_tifhal_hdmicec_term();
+int tos_tifhal_hdmicec_add_logical_address(EN_FPP_CEC_DEVICE_LOG_ADDR_T{int}{in} addr);
+int tos_tifhal_hdmicec_clear_logical_address();
+int tos_tifhal_get_physical_address(uint16_t{out}{len:1} * physicalAddress);
+int tos_tifhal_hdmicec_send_message(ST_FPP_CEC_RX_DATA_T{in}{len:(lenght)} *msg);
+int tos_tifhal_hdmicec_add_callback(tos_tifhal_hdmicec_callback* {in}{len:(lenght)} callback, void* {in}{len:1} userdata);
+int tos_tifhal_hdmicec_remove_callback(tos_tifhal_hdmicec_callback{in}{len:(maxCount)} callback, void* {in}{len:1} userdata);
+int tos_tifhal_get_version(int {out}{len:1} *cecVersion);
+int tos_tifhal_get_vendor_id(int{out}{len:1} *vendorId);
+int tos_tifhal_get_port_info(TOS_TIFHAL_HDMICEC_HDMI_PORT_INFO_T {out}{len:(lenght)} *portInfo,int maxCount);
+int tos_tifhal_hdmicec_set_option(int flag, int value);
+int tos_tifhal_hdmicec_set_audio_return_channel(int portId,int flag);
+int tos_tifhal_hdmicec_is_connected(int portId);
+

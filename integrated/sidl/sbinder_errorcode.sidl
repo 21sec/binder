@@ -1,0 +1,2 @@
+void tos_log_set_errcode(int{int}{in} id,unsigned int{int}{in} code);
+

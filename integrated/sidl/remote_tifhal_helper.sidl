@@ -1,0 +1,12 @@
+#include "tos_tifhal_helper.h"
+
+int tos_tifhal_tvinput_initialize(tos_tifhal_tvinput_notify callback,void* {len:1}{in} userdata);
+
+int tos_tifhal_tvinput_get_stream_count(int deviceId);
+
+int tos_tifhal_tvinput_get_stream_configurations(int deviceId,tos_tifhal_tvinput_tv_stream_config_t{out}{len:(maxCount)} *configs, int maxCount);
+
+int tos_tifhal_tvinput_request_capture(int deviceId,int streamId,int sequence);
+
+int tos_tifhal_tvinput_cancel_capture(int deviceId,int streamId,int sequence);
+

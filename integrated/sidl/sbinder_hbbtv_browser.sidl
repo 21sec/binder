@@ -1,0 +1,3 @@
+
+fpi_error{int} tos_hbbtv_browser_handle_key(uint16_t{int}{in} keyCode,uint16_t{int}{in} keyType,fpi_bool{int}{out}{len:1} *isHandle);
+

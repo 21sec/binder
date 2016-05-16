@@ -1,0 +1,10 @@
+
+int tos_property_set(const char {in}{len:1}*key,const char{in}{len:1} *value);
+
+const char {out}{len:1} *tos_property_get(const char{in}{len:1} *key,const char{in}{len:1} *defValue);
+
+int tos_property_remove(const char{in}{len:1} *key);
+
+int tos_property_reset(void);
+
+

@@ -1,0 +1,16 @@
+#include "tos_atv_scan.h"
+
+fpi_error{int} tos_atv_start_auto_scan();
+fpi_error{int} tos_atv_start_manual_scan(int32_t{int}{in} start_frequency,int32_t{int}{in} end_frequency);
+fpi_error{int} tos_atv_start_update_scan();
+fpi_error{int} tos_atv_set_fine_tune_by_frequency(int32_t{int}{in} programNum, int32_t{int}{in} toFreqency,EN_ACT_CTRL{int}{in} act);
+fpi_error{int} tos_atv_fine_tune(int32_t{in} programNum, EN_FINE_TUNE_MODE{int} ftMode);
+fpi_error{int} tos_atv_manual_scan_save(EN_ATV_SCAN_CTRL{int}{in} action);
+fpi_error{int} tos_atv_get_audio_standard(int32_t{int}{in} programNum, EN_SOUND_SYSTEM_T{int}{out}{len:1} *aStdType);
+fpi_error{int} tos_atv_get_video_standard(int32_t{int}{in} programNum, EN_COLOR_SYSTEM_T{int}{out}{len:1} *cSysType);
+fpi_error{int} tos_atv_set_audio_standard(int32_t{int}{in} programNum, EN_SOUND_SYSTEM_T{int}{in} aStdType,EN_ACT_CTRL{int}{in} act);
+fpi_error{int} tos_atv_set_video_standard(int32_t{int}{in} programNum, EN_COLOR_SYSTEM_T{int}{in} vStdType,EN_ACT_CTRL{int}{in} act);
+fpi_error{int} tos_atv_get_current_scaned_program_info(st_api_scanning_info_t{out}{len:1}* scanning_info);
+fpi_error{int} tos_atv_get_aft_enable(int32_t{int}{in} programNum,fpi_bool{int}{out}{len:1} *enable);
+fpi_error{int} tos_atv_get_current_frequency(int32_t{int}{out}{len:1} *freq);
+fpi_error{int} tos_atv_scan_get_status(EN_TOS_DTV_SCAN_STATUS {int}{out}{len:1} *status);

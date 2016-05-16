@@ -1,0 +1,14 @@
+#include "tos_media_scan.h"
+#include "fpi_error_code.h"
+#include "fpi_base_type.h"
+
+fpi_error{int} tos_ms_add_callback(tos_ms_callback_fn{int}{in} cb, void{int}{in}{len:1}* userData);
+fpi_error{int} tos_ms_remove_callback(tos_ms_callback_fn{int}{in} cb);
+fpi_error{int} tos_ms_start_scan_file(const char{int}{in}{len:1} *path);
+fpi_error{int} tos_ms_cancel_scan_file();
+fpi_error{int} tos_ms_get_file_list_by_type(FPI_MS_SORT_MODE_E{int}{in} mode, const char{int}{in}{len:1} *path, FPI_MS_FILE_TYPE_E{int}{in} type, FPI_MS_File_Node_S{int}{out}{len:1} *list);
+int tos_ms_get_file_count(const char{int}{in}{len:1} *path,FPI_MS_FILE_TYPE_E{int}{in} type);
+fpi_error{int} tos_ms_set_scan_mode(FPI_MS_SCAN_MODE_E{int}{in} mode);
+fpi_error{int} tos_ms_create_tmb_task(const char{int}{in}{len:1} *path, FPI_MS_FILE_TYPE_E{int}{in} type);
+fpi_error{int} tos_ms_stop_tmb_task();
+

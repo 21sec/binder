@@ -1,0 +1,16 @@
+#include "tos_ts_player.h"
+
+fpi_error{int} tos_ts_play_create_fifo(void);
+fpi_error{int} tos_ts_play_env_init(void);
+fpi_error{int} tos_ts_play_env_uninit(void);
+fpi_error{int} tos_ts_play_init(void);
+fpi_error{int} tos_ts_play_uninit(void);
+fpi_error{int} tos_ts_play_set_param(uint16_t{int}{in} video_pid,uint16_t{int}{in} audio_pid);
+fpi_error{int} tos_ts_play_start(void);
+fpi_error{int} tos_ts_play_pause(void);
+fpi_error{int} tos_ts_play_resume(void);
+fpi_error{int} tos_ts_play_stop(void);
+fpi_error{int} tos_ts_play_push_data(uint16_t{int}{in} data_len);
+fpi_error{int} tos_ts_play_get_pts(int32_t{int}{out}{len:1}*n32_pts);
+fpi_error{int} tos_ts_play_add_callback(tos_event_handle_t{int}{in} cb, void{int}{in}{len:1}*userData);
+fpi_error{int} tos_ts_play_remove_callback(tos_event_handle_t{int}{in} cb);

@@ -1,0 +1,2 @@
+fpi_error{int}	fpp_system_get_average_luma( uint8_t{out}{len:1} *val);
+fpi_error{int}	fpp_system_get_luma_level_distribution( uint16_t{out}{len:size} *luma_distribution,uint8_t{in}{len:1} size);

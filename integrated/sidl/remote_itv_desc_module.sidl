@@ -1,0 +1,13 @@
+#include "itv_defines.h"
+#include "itv_desc.h"
+
+int itv_desc_open_descrambler (itv_desc_stream_type_t stream_type, itv_handle_t{out}{len:1}* descrambler);
+
+int itv_desc_close_descrambler(itv_handle_t descrambler);
+
+int itv_desc_set_descrambler_pid (itv_handle_t descrambler, int pid);
+
+int itv_desc_set_descrambler_key(itv_handle_t descrambler, 
+											itv_desc_key_type_t keyType, 
+											const unsigned char{in}{len:keyLen}* key, 
+											const int keyLen);

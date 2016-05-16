@@ -1,0 +1,18 @@
+#include "itv_defines.h"
+#include "itv_demux.h"
+
+int itv_demux_set_source_type(int demuxId, itv_demux_source_type_t source);
+
+int itv_demux_set_filter_callback(int demuxId, itv_demux_filter_callback cb, void{in}{len:1}* userData);
+
+int itv_demux_push_stream(int demuxId, const char{in}{len:len}* pBuff, int len);
+
+int itv_demux_open_filter(int demuxId, itv_demux_filter_type_t filterType, itv_handle_t{out}{len:1}* filter);
+
+int itv_demux_close_filter(itv_handle_t filter);
+
+int itv_demux_set_filter(itv_handle_t filter, const itv_demux_filter_param_t{in}{len:1}* param);
+
+int itv_demux_start_filter(itv_handle_t filter);
+
+int itv_demux_stop_filter(itv_handle_t filter);

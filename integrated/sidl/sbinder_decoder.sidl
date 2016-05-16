@@ -1,0 +1,4 @@
+#include "fpp_decoder.h"
+
+fpi_error{int} fpp_decoder_get_device_count (uint32_t{out}{len:1} * count);
+fpi_error{int} fpp_decoder_get_device_info (ST_FPP_DECODER_INFO_T{out}{len:} * pst_decoderInfo);

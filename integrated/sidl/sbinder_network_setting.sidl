@@ -1,0 +1,75 @@
+
+fpi_error{int} tos_network_get_hardware_status(EN_NETWORK_TYPE network_type, int32_t{out}{len:1} *status);
+
+
+fpi_error{int} tos_network_wire_connect(E_NETWORK_CONNECT_TYPE type ,st_wire_network_info{struct}{in}{len:length} *info);
+
+
+fpi_error{int} tos_network_wire_get_connect_type(E_NETWORK_CONNECT_TYPE{out}{len:1} *type ); 
+
+
+
+fpi_error{int} tos_network_get_connect_status(EN_NETWORK_TYPE network_type,int32_t{out}{len:1} *value);
+
+
+fpi_error{int} tos_network_get_current_speed(EN_NETWORK_TYPE network_type,char{out}{len:length} *speed,int32_t size);
+
+
+
+fpi_error{int} tos_network_wireless_get_current_signalquality(int32_t{out}{len:1} *value);
+
+
+fpi_error{int} tos_network_wireless_get_current_signalstrength(int32_t{out}{len:1} *value);
+
+fpi_error{int} tos_network_wireless_get_encryption_mode(int32_t{out}{len:1} *value);
+
+
+fpi_error{int} tos_network_wireless_get_encrypt_algorithm(char{out}{len:length} *encrypt_data,int32_t size );
+
+fpi_error{int} tos_network_wireless_get_channel( int32_t{out}{len:1} *channel,char{out}{len:length} *freq);
+
+fpi_error{int} tos_network_wireless_get_ap_count(int32_t{out}{len:1} *ap_data);
+
+fpi_error{int} tos_network_wireless_start_scan();
+
+
+fpi_error{int} tos_network_wireless_stop_scan();
+
+fpi_error tos_network_wireless_get_ap_list(int32_t onePageApCount,int32_t pageIndex,st_wireless_network_info{out}{len:length} *pwireless_info,int{out}{len:1} *pAvailableCount);
+
+fpi_error{int} tos_network_wireless_get_last_connect_ap_info(st_ap_info{out}{len:length}  *api_ap_info);
+
+
+fpi_error{int} tos_network_wireless_connect_manual(char{in}{len:length} *ssid, char{in}{len:length} *psw,API_WIFI_SECURITY_TYPE SECURITY,char{in}{len:length} *encryption);
+
+
+
+ fpi_error{int} tos_network_wireless_connect_pbc();
+
+
+ fpi_error{int} tos_network_wireless_abort_pbc();
+
+
+fpi_error{int} tos_network_wireless_connect_wps_pin(const char{in}{len:length} *pin_in,char{out}{len:length} *pin_out,int32_t out_size);
+
+
+fpi_error{int} tos_network_wireless_wps_pin_fresh(char{out}{len:length} * pin_out);
+
+
+
+fpi_error{int} tos_network_wireless_get_wps_pin(char{out}{len:length} *pin_out,int32_t size );
+
+
+
+fpi_error{int} tos_network_wireless_miracast_start();
+
+fpi_error{int} tos_network_wireless_miracast_stop();
+fpi_error{int} tos_network_get_info(st_wire_network_info{out}{len:length}  *network_info);
+fpi_error{int} tos_network_local_connection_test();
+fpi_error{int} tos_network_connection_test();
+fpi_error{int} tos_network_set_enable(fpi_bool{int} enable);
+fpi_error{int} tos_network_get_enable(fpi_bool{out}{len:1} *enable);
+fpi_error{int} tos_network_set_select_pattern(E_NETWORK_CONNECT_TYPE  connect_pattern);
+fpi_error{int} tos_network_get_select_pattern(E_NETWORK_CONNECT_TYPE{out}{len:1}  *connect_pattern);
+
+fpi_error{int} tos_network_change_notify(EN_NETWORK_CHANGE_TYPE{int}{in} type, int32_t reserved_data);

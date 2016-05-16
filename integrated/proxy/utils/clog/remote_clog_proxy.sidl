@@ -1,0 +1,23 @@
+#include "clog.h"
+#include "_clog.h"
+
+
+void _clog_write(const char{in}{len:1}* tag,int level,const char{in}{len:1}* buf);
+
+int clog_startlogsave( const char{in}{len:1}* path, int rotateSize, int rotateCount ) ;
+
+int clog_stoplogsave( ) ;
+
+int clog_setlevel( const char{in}{len:1}* tag, int level ) ;
+
+int clog_addsavetriger( const char{in}{len:1}* filterString, clog_ontriger triger, void{in}{len:1}* userdata ) ;
+
+int clog_removesavetriger( const char{in}{len:1}* filterString, clog_ontriger triger ) ;
+
+int _clog_write(const char{in}{len:1}* tag,int level,char{in}{len:1}* buf);
+
+int _clog_addsynccallback(_clog_sync_callback callback,void{in}{len:1}* userdata);
+
+int _clog_removesynccallback(_clog_sync_callback callback);
+
+int _clog_getTagTable(const char{in}{len:1}* p);

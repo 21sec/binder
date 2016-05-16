@@ -1,0 +1,10 @@
+#include "fpp_audio.h"
+
+fpi_error{int}	fpp_audio_record_init(uint32_t  u32_buffersize);
+fpi_error{int}	fpp_audio_set_record_param(EN_FPP_LINEIN_TYPE_T  en_linein,ST_RECORD_AUDIO_PARAM_T{struct}  param);
+fpi_error{int}	fpp_audio_get_read_buffer_address( uint32_t{out}{len:*un32_size} **un32_addr,uint32_t{out}{len:1} *un32_size);
+fpi_error{int}	fpp_audio_get_buffer_real_size(uint32_t{out}{len:1} *un32_realsize);
+fpi_error{int}	fpp_audio_reset_buffer(void);
+fpi_error{int}	fpp_audio_confirm_data(uint32_t address , uint32_t real_size);
+fpi_error{int}	fpp_audio_record_control(EN_CONTROL_TYPE_T en_control_type);
+

@@ -1,0 +1,6 @@
+#include "tos_signal.h"
+
+fpi_error{int} tos_signal_get_state(EN_FPI_SIGNAL_STATUS_TYPE{int}{out}{len:1}* state);
+fpi_error{int} tos_signal_get_current_info(st_fpi_signal_info_t{out}{len:1}* signaInfo);
+fpi_error{int} tos_signal_get_timing_info(st_fpi_signal_timing_t{out}{len:1}* value);
+fpi_error{int} tos_signal_get_extra_info(EN_FPI_SIGNAL_INFO_TYPE{int} type,void{out}{len:1}* param);

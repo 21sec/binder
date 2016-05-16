@@ -1,0 +1,30 @@
+#include "itv_defines.h"
+#include "itv_smc.h"
+
+int itv_smc_open(int smcId, const itv_smc_open_param_t{in}{len:1}* pParams, itv_handle_t{out}{len:1}* pOutSmcHandle);
+
+int itv_smc_close(itv_handle_t handle);
+
+int itv_smc_reset(itv_handle_t handle,unsigned char{out}{len:64}* pMsgATR, 
+									unsigned int{out}{len:1}* msglength, 
+									unsigned char coldreset);
+
+int itv_smc_transfer_data(itv_handle_t handle,
+									const unsigned char{in}{len:reqlen}* pReqdata, 
+									unsigned int reqlen, 
+									unsigned char{out}{len:replen}* pRepdata, 
+									unsigned int{out}{len:1} *replen, 
+									unsigned short int{out}{len:1}* pStatusword);
+
+int itv_smc_send(itv_handle_t handle, const unsigned char{in}{len:numToWrite}* pBuffer, 
+									unsigned int numToWrite, 
+									unsigned int{out}{len:1}* pNumberWritten , 
+									unsigned int timeout);
+									  
+
+int itv_smc_receive(itv_handle_t handle, unsigned char{out}{len:numberToRead}* pBuffer, 
+									unsigned int numberToRead, 
+									unsigned int{in}{len:1}* pNumberReaded, 
+									unsigned int timeout);
+
+int itv_smc_get_info(itv_handle_t handle, itv_smc_info_t{out}{len:1}* pOutSmcInfo);

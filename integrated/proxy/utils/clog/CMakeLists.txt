@@ -1,0 +1,11 @@
+include_directories(${CMAKE_CURRENT_BINARY_DIR})
+
+set(BIN_SBINDER_CLOG_SRC_SERVER
+   ${CMAKE_CURRENT_SOURCE_DIR}/testClog.cpp
+)
+
+add_executable(CLOGCLIENT ${BIN_SBINDER_CLOG_SRC_SERVER} )
+set_target_properties(CLOGCLIENT  PROPERTIES COMPILE_DEFINITIONS "BINDER_CLIENT" )
+target_link_libraries(CLOGCLIENT ${PROXY_LIB_NAME}S)
+
+

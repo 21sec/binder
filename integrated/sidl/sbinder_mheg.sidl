@@ -1,0 +1,5 @@
+fpi_error{int} tos_mheg_is_open(fpi_bool{int}{out}{len:1} *value);
+fpi_error{int} tos_mheg_dispatch_key_code(uint32_t keycode);
+fpi_error{int} tos_mheg_get_userinput_state(uint8_t{int}{out}{len:1} *value);
+fpi_error{int} tos_mheg_stop();
+fpi_error{int} tos_mheg_start();

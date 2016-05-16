@@ -1,0 +1,11 @@
+#include "fpp_picture.h"
+
+
+fpi_error{int} fpp_picture_create(uint32_t{int}{out}{len:1} *handle);
+fpi_error{int} fpp_picture_delete(uint32_t{int} handle);
+fpi_error{int} fpp_picture_push_data(uint32_t{int} handle, const uint8_t{int}{in}{len:strlen(pname)} *pname, uint32_t{int} size);
+fpi_error{int} fpp_picture_decode_data (uint32_t{int} handle ,const uint8_t{int}{in}{len:1} *pImgData,  uint32_t{int} size,ST_FPP_PICTURE_RAW_BUFFER_T{struct}{out}{len:1} *pBuffer);
+fpi_error{int} fpp_picture_push_eos(uint32_t{int}  handle);
+fpi_error{int} fpp_picture_set_param(EN_FPP_DISPLAY_TYPE{int} type);
+fpi_error{int} fpp_picture_show(uint32_t{int} handle, uint32_t{int} windowID, ST_PICTURE_SHOW_RECT{struct}{int}{len:1} rect, int32_t{int} degree);
+fpi_error{int} fpp_picture_hide(uint32_t{int}  handle, uint32_t{int} windowID);

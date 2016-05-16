@@ -1,0 +1,23 @@
+#include "tos_channel_play.h"
+
+int tos_channel_play_get_current_channel_info(int{out}{len:1}*play_info);
+
+int tos_channel_play_get_current_channel_id(int{out}{len:1}*channelId);
+
+int tos_channel_play(int channelId);
+
+int tos_channel_play_delivery(int{in}{len:1}*info);
+
+int tos_channel_play_unlock();
+
+int tos_channel_play_relock();
+
+int tos_channel_play_set_lock_status(int locked);
+
+int tos_channel_play_stop();
+
+int tos_channel_play_get_status(int{out}{len:1}*status);
+
+int tos_channel_play_add_callback(int callback, int{in}{len:1}*userdata);
+
+int tos_channel_play_remove_callback(int callback);
